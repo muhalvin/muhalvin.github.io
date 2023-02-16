@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muhalvin.github.io/sitemap.xml
