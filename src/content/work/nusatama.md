@@ -1,7 +1,7 @@
 ---
-company: "Google"
-role: "Staff Software Engineer"
-dateStart: "11/27/2022"
+company: "Nusatama"
+role: "Web Developer"
+dateStart: "11/01/2023"
 dateEnd: "Current"
 ---
 
