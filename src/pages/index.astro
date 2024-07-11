@@ -33,18 +33,42 @@ const work = await Promise.all(
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Alvin <span class="text-xl">👋🏻</span> 
+      Hi, I'm Muhammad Alvin <span class="text-xl">👋🏻</span> 
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
-          <p class="animate">
-            I'm a passionate web developer with a keen eye for clean, functional, and easy-to-read code. I specialize in crafting robust web applications using frameworks like Laravel and Codeigniter. My toolkit includes HTML/CSS, PHP, JavaScript, SQL, and various developer tools such as Git, VS Code, NPM, Composer, Postman, and HTTPie.
+          <p class="animate text-justify">
+            I'm a passionate web developer with a keen eye for clean, functional, and easy-to-read code. I specialize in crafting robust web applications using frameworks like Laravel and Codeigniter. My toolkit includes HTML/CSS, PHP, JavaScript, SQL, and various developer tools such as Git, VS Code, NPM, Composer, Postman, HTTPie, etc.
+          </p>
 
+          <p class="animate text-justify">
             With a strong foundation in web development, REST API integration, and a knack for meticulous testing and debugging, I strive to deliver seamless and efficient user experiences. Beyond coding, I enjoy exploring the intricacies of game development, PC hardware, and the latest in IT innovations. Always eager to learn and grow, I'm committed to pushing the boundaries of what's possible in the digital world.
           </p>
         </article>
       </section>
+
+      
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects">
+            See all projects
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {projects.map(project => (
+            <li>
+              <ArrowCard entry={project} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
@@ -64,7 +88,9 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-6">
+
+
+      <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
@@ -91,25 +117,9 @@ const work = await Promise.all(
             </li>
           ))}
         </ul>
-      </section>
+      </section> -->
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
-          </h5>
-          <Link href="/projects">
-            See all projects
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
-            </li>
-          ))}
-        </ul>
-      </section>
+
 
       <section class="animate space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
