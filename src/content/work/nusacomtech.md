@@ -1,8 +1,8 @@
 ---
 company: "CV. NUSACOMPUTECH"
-role: "JUNIOR WEB DEVELOPER"
+role: "Junior Web Developer"
 dateStart: "07/03/2023"
 dateEnd: "11/30/2023"
 ---
 
-As a Junior Web Developer at CV. NUSACOMPUTECH, I contributed to the development and maintenance of web applications, focusing on creating responsive interfaces with HTML, CSS, and JavaScript. I assisted in developing server-side logic using PHP, collaborated with senior developers on projects, and supported database management with SQL. My responsibilities also included debugging code, testing applications, and integrating APIs to ensure smooth functionality. I gained valuable experience in version control with Git and participated in team meetings to understand project requirements and provide technical support. My time at NUSACOMPUTECH honed my skills in web development and laid a strong foundation for my professional growth.
+Sebagai Junior Web Developer di CV. NUSACOMPUTECH, saya berkontribusi dalam pengembangan dan pemeliharaan aplikasi web, dengan fokus pada pembuatan antarmuka responsif menggunakan HTML, CSS, dan JavaScript. Saya membantu dalam pengembangan logika sisi server menggunakan PHP, bekerja sama dengan pengembang senior dalam proyek-proyek, dan mendukung manajemen basis data dengan SQL. Tanggung jawab saya juga mencakup debugging kode, pengujian aplikasi, dan integrasi API untuk memastikan fungsi yang lancar. Saya mendapatkan pengalaman berharga dalam pengendalian versi dengan Git dan berpartisipasi dalam pertemuan tim untuk memahami kebutuhan proyek serta memberikan dukungan teknis. Waktu saya di NUSACOMPUTECH mengasah keterampilan saya dalam pengembangan web dan membentuk dasar yang kuat untuk pertumbuhan profesional saya.
