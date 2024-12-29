@@ -19,6 +19,16 @@ import '../styles/tailwinds.css';
 
 		<title>{title}</title>
 
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3Z8YVXZW3"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments);}
+		  	gtag('js', new Date());
+			
+		  	gtag('config', 'G-W3Z8YVXZW3');
+		</script>
+		
 		<script is:inline>
 		  	function speedInsightsBeforeSend(data){
 				console.log("Speed Insights before send", data)
