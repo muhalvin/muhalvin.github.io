@@ -2,28 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Muhalvin | Web Dev Portfolio">
-    <div class="flex flex-col justify-center h-screen bg-[#032030] text-white font-mono px-60">
-        <h1 class="text-[40px] font-bold mb-6 leading-relaxed tracking-tight">
-            👋 Hi, I'm <span class="text-[#FF6347]">Muhalvin</span>
-        </h1>
-        <p class="text-[20px] mb-4 tracking-tight">
-            Welcome to my <span class="text-[#FFD700]">personal site</span>!
-        </p>
-        <p class="text-[18px] mb-6 tracking-tight">
-            I’m a self-taught developer with a passion for learning and teaching others. 
-            Currently, I work with the amazing team at PRATAMA as a Web Developer.
-        </p>
-        <div class="flex space-x-12 mt-4 tracking-tight">
-            <a href="https://muhalvin.my.id" target="_blank" class="text-[12px] font-bold hover:underline">
-                www - <span class="text-[#FFD700]">Currently in Development</span>
-            </a>
-            <a href="https://muhalvin.medium.com" target="_blank" class="text-[12px] font-bold hover:underline">
-                medium - <span class="text-[#FFD700]">Read my articles</span>
-            </a>
-            <a href="mailto:work.muhalvin@gmail.com" target="_blank" class="text-[12px] font-bold hover:underline">
-                email - <span class="text-[#FFD700]">Get in touch</span>
-            </a>
+<Layout title="Muhalvin | Web Developer">
+    <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-[#0D1B2A] to-[#032030] text-white px-6 lg:px-24">
+        <!-- Konten Utama -->
+        <div class="relative z-10 bg-gradient-to-b from-[#0D1B2A] to-[#032030] px-6 py-12 rounded-lg max-w-4xl text-left">
+            <h1 class="text-[30px] md:text-[38px] font-semibold mb-6 tracking-tight text-white font-['JetBrains Mono']">
+                👋 Hi, I'm <span class="text-[#FF6347]">Muhalvin</span>
+            </h1>
+
+            <p class="text-[18px] md:text-[18px] text-gray-300 mb-8 text-justify leading-loose max-w-3xl font-serif">
+                Welcome to my <span class="text-[#FFD700]">personal site</span>! 
+                I’m a self-taught developer with a passion for learning and sharing knowledge. 
+                Currently, I work with the amazing team at PRATAMA as a Web Developer.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-10 mt-8 text-justify">
+                <a href="https://muhalvin.my.id" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
+                    www - <span class="text-[#FFD700]">Currently in Development</span>
+                </a>
+                <a href="https://muhalvin.medium.com" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
+                    medium - <span class="text-[#FFD700]">Read my articles</span>
+                </a>
+                <a href="mailto:work.muhalvin@gmail.com" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
+                    email - <span class="text-[#FFD700]">Get in touch</span>
+                </a>
+            </div>
         </div>
     </div>
 </Layout>

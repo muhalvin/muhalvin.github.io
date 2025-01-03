@@ -4,7 +4,6 @@ interface Props {
 }
 const { title } = Astro.props;
 
-import SpeedInsights from '@vercel/speed-insights/astro';
 import '../styles/tailwinds.css';
 ---
 
@@ -15,10 +14,11 @@ import '../styles/tailwinds.css';
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-
+		
 		<title>{title}</title>
 
+  		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+				
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3Z8YVXZW3"></script>
 		<script>
@@ -28,14 +28,6 @@ import '../styles/tailwinds.css';
 			
 		  	gtag('config', 'G-W3Z8YVXZW3');
 		</script>
-		
-		<script is:inline>
-		  	function speedInsightsBeforeSend(data){
-				console.log("Speed Insights before send", data)
-				return data;
-		  	}
-		</script>
-		<SpeedInsights />
 	</head>
 	<body>
 		<slot />
