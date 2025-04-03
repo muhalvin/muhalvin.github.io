@@ -1,32 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import portfolio from "../data/portfolio.json";
 ---
 
-<Layout title="Muhalvin | Web Developer">
-    <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-[#0D1B2A] to-[#032030] text-white px-6 lg:px-24">
-        <!-- Konten Utama -->
-        <div class="relative z-10 bg-gradient-to-b from-[#0D1B2A] to-[#032030] px-6 py-12 rounded-lg max-w-4xl text-left">
-            <h1 class="text-[30px] md:text-[38px] font-semibold mb-6 tracking-tight text-white font-['JetBrains Mono']">
-                👋 Hi, I'm <span class="text-[#FF6347]">Muhalvin</span>
-            </h1>
+<Layout title="Muhammad Alvin | Web Developer">
+    <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#1E222A] to-[#282C34] p-4">
+        <div class="relative w-full max-w-[1380px] h-[90vh] max-h-[800px] flex flex-col shadow-2xl rounded-lg overflow-hidden">
 
-            <p class="text-[18px] md:text-[18px] text-gray-300 mb-8 text-justify leading-loose max-w-3xl font-serif">
-                Welcome to my <span class="text-[#FFD700]">personal site</span>! 
-                I’m a self-taught developer with a passion for learning and sharing knowledge. 
-                Currently, I work with the amazing team at PRATAMA as a Web Developer.
-            </p>
+            <div class="flex items-center bg-[#282C34] px-4 py-3 rounded-t-lg border border-[#3E4451] shadow-md">
+                <div class="flex space-x-2 mr-4">
+                    <div class="w-3 h-3 rounded-full bg-[#E06C75]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#E5C07B]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#98C379]"></div>
+                </div>
+                <span class="text-[#D8DEE9] text-sm font-medium tracking-wide">Muhammad Alvin - Portfolio</span>
+            </div>
 
-            <div class="flex flex-col md:flex-row gap-10 mt-8 text-justify">
-                <a href="https://muhalvin.my.id" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
-                    www - <span class="text-[#FFD700]">Currently in Development</span>
-                </a>
-                <a href="https://muhalvin.medium.com" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
-                    medium - <span class="text-[#FFD700]">Read my articles</span>
-                </a>
-                <a href="mailto:contact@muhalvin.my.id" target="_blank" class="text-[14px] font-semibold hover:underline text-gray-300 hover:text-[#FFD700] font-['JetBrains Mono']">
-                    email - <span class="text-[#FFD700]">Get in touch</span>
-                </a>
+            <div id="portfolio-container" class="flex-1 overflow-hidden bg-[#2E3440] rounded-b-lg border border-[#434C5E] border-t-0 shadow-xl group">
+                <pre id="portfolio-text" class="h-full p-6 text-[#ECEFF4] text-sm md:text-base font-mono whitespace-pre-wrap break-words overflow-x-hidden scrollbar-thin scrollbar-track-[#2E3440] scrollbar-thumb-[#4C566A] transition-all duration-300 opacity-0 animate-fade-in">
+{JSON.stringify(portfolio, null, 4)}
+                </pre>
             </div>
         </div>
     </div>
+
+    <style is:global>
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 4px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #4C566A;
+            transition: background-color 0.3s ease;
+        }
+        .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+            background-color: #5E81AC;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out forwards;
+        }
+    </style>
 </Layout>
