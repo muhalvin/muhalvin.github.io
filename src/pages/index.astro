@@ -1,64 +1,125 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import portfolio from "../data/portfolio.json";
+import "../styles/global.css";
 ---
 
-<Layout title="Muhammad Alvin | Web Developer">
-    <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#1E222A] to-[#282C34] p-4">
-        <div class="relative w-full max-w-[1380px] h-[90vh] max-h-[800px] flex flex-col shadow-2xl rounded-lg overflow-hidden">
+<style>
+  body {
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+  }
+</style>
 
-            <div class="flex items-center bg-[#282C34] px-4 py-3 rounded-t-lg border border-[#3E4451] shadow-md">
-                <div class="flex space-x-2 mr-4">
-                    <div class="w-3 h-3 rounded-full bg-[#E06C75]"></div>
-                    <div class="w-3 h-3 rounded-full bg-[#E5C07B]"></div>
-                    <div class="w-3 h-3 rounded-full bg-[#98C379]"></div>
-                </div>
-                <span class="text-[#D8DEE9] text-sm font-medium tracking-wide">Muhammad Alvin - Portfolio</span>
-            </div>
+<Layout title="Home">
+  <div
+    class="min-h-screen bg-gray-900/86 px-6 py-12 flex items-center justify-center"
+  >
+    <!-- Container dengan border elegan -->
+    <div
+      class="relative max-w-3xl w-full border border-amber-400/60 rounded-lg p-8 md:p-12 backdrop-blur-sm shadow-xl"
+    >
+      <!-- Highlight corners -->
+      <div
+        class="absolute -top-3 -left-3 w-6 h-6 border-t border-l border-amber-400/60"
+      >
+      </div>
+      <div
+        class="absolute -top-3 -right-3 w-6 h-6 border-t border-r border-amber-400/60"
+      >
+      </div>
+      <div
+        class="absolute -bottom-3 -left-3 w-6 h-6 border-b border-l border-amber-400/60"
+      >
+      </div>
+      <div
+        class="absolute -bottom-3 -right-3 w-6 h-6 border-b border-r border-amber-400/60"
+      >
+      </div>
 
-            <div id="portfolio-container" class="flex-1 overflow-hidden bg-[#2E3440] rounded-b-lg border border-[#434C5E] border-t-0 shadow-xl group">
-                <pre id="portfolio-text" class="h-full p-6 text-[#ECEFF4] text-sm md:text-base font-mono whitespace-pre-wrap break-words overflow-x-hidden scrollbar-thin scrollbar-track-[#2E3440] scrollbar-thumb-[#4C566A] transition-all duration-300 opacity-0 animate-fade-in">
-{JSON.stringify(portfolio, null, 4)}
-                </pre>
-            </div>
-        </div>
+      <!-- Judul dengan aksen amber -->
+      <h1
+        class="text-3xl md:text-4xl font-serif font-light tracking-wider text-blue-100 mb-6"
+      >
+        <span class="text-amber-400">※</span> Muhalvin
+      </h1>
+
+      <!-- Teks utama -->
+      <p
+        class="font-serif text-gray-300 leading-relaxed text-lg border-l border-amber-400 pl-4 mb-8"
+      >
+        A craftsman of code, walking the path of continuous learning.<br />
+        Currently shaping digital landscapes with <span
+          class="text-amber-400 font-medium">NUSATAMA</span
+        >,<br />
+        where each line of code is a deliberate stroke.
+      </p>
+
+      <!-- Daftar link -->
+      <ul class="space-y-4 text-gray-300 font-serif">
+        <li class="flex items-center group">
+          <span
+            class="text-amber-300 mr-3 group-hover:text-amber-400 transition-all"
+            >⟠</span
+          >
+          <a
+            href="https://muhalvin.is-a.dev/"
+            target="_blank"
+            class="hover:text-amber-300 transition-colors"
+          >
+            Digital Portfolio
+          </a>
+        </li>
+        <li class="flex items-center group">
+          <span
+            class="text-amber-300 mr-3 group-hover:text-amber-400 transition-all"
+            >⟡</span
+          >
+          <a
+            href="https://muhalvin.medium.com"
+            target="_blank"
+            class="hover:text-amber-300 transition-colors"
+          >
+            Technical Writings
+          </a>
+        </li>
+        <li class="flex items-center group">
+          <span
+            class="text-amber-300 mr-3 group-hover:text-amber-400 transition-all"
+            >⟢</span
+          >
+          <a
+            href="https://blog.muhalvin.my.id/"
+            target="_blank"
+            class="hover:text-amber-300 transition-colors"
+          >
+            Personal Reflections
+          </a>
+        </li>
+        <li class="flex items-center group">
+          <span
+            class="text-amber-300 mr-3 group-hover:text-amber-400 transition-all"
+            >✍</span
+          >
+          <a
+            href="mailto:contact@muhalvin.my.id"
+            target="_blank"
+            class="hover:text-amber-300 transition-colors"
+          >
+            Correspondence
+          </a>
+        </li>
+      </ul>
+
+      <!-- Footer dengan tulisan Cina -->
+      <div
+        class="mt-10 pt-4 border-t border-amber-400/60 text-xs text-amber-400 text-center font-serif tracking-widest"
+      >
+        代码 · 设计 · 哲学
+      </div>
     </div>
-
-    <style is:global>
-        .scrollbar-thin::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-track {
-            background: transparent;
-            border-radius: 4px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-            border-radius: 4px;
-            background-color: #4C566A;
-            transition: background-color 0.3s ease;
-        }
-        .scrollbar-thin:hover::-webkit-scrollbar-thumb {
-            background-color: #5E81AC;
-        }
-
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-in-out forwards;
-        }
-    </style>
+  </div>
 </Layout>
