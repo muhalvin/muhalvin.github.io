@@ -1,48 +1,48 @@
 ---
 // src/layouts/Layout.astro
 export interface Props {
-  title?: string;
+    title?: string;
 }
 const { title = "Astro Basics" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
 
-    <!-- Primary Meta Tags -->
-    <title>{title} | Muhalvin</title>
-    <meta name="title" content={`${title} | Muhalvin`} />
-    <meta
-      name="description"
-      content="Personal portfolio and writings of Muhalvin, a web developer crafting digital experiences with modern technologies."
-    />
-    <meta name="author" content="Muhalvin" />
+        <!-- Primary Meta Tags -->
+        <title>{title} | Muhalvin</title>
+        <meta name="title" content={`${title} | Muhalvin`} />
+        <meta
+            name="description"
+            content="Personal portfolio and writings of Muhalvin, a web developer crafting digital experiences with modern technologies."
+        />
+        <meta name="author" content="Muhalvin" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://muhalvin.my.id/" />
-  </head>
-  <body>
-    <slot />
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://muhalvin.my.id/" />
+    </head>
+    <body>
+        <slot />
 
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Muhalvin",
-        "url": "https://muhalvin.my.id",
-        "sameAs": [
-          "https://github.com/muhalvin",
-          "https://linkedin.com/in/muhalvin"
-        ],
-        "jobTitle": "Web Developer",
-        "description": "Professional web developer specializing in modern web technologies"
-      }
-    </script>
-  </body>
+        <!-- Schema.org markup -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Muhalvin",
+                "url": "https://muhalvin.my.id",
+                "sameAs": [
+                    "https://github.com/muhalvin",
+                    "https://linkedin.com/in/muhalvin"
+                ],
+                "jobTitle": "Web Developer",
+                "description": "Professional web developer specializing in modern web technologies"
+            }
+        </script>
+    </body>
 </html>
