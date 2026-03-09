@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 function App() {
+  const palestineBannerSrc = `${import.meta.env.BASE_URL}StandWithPalestine.svg`;
+
   return (
     <main className="page-shell flex min-h-screen items-center justify-center bg-hero-gradient px-4 py-6">
       <motion.section
@@ -94,6 +96,18 @@ function App() {
             </a>
           </li>
         </ul>
+
+        <a
+          href="#"
+          rel="noreferrer"
+          className="relative mx-auto mt-8 block w-full max-w-xs overflow-hidden rounded-xl border border-white/10 transition hover:border-emerald-200/40"
+        >
+          <img
+            src={palestineBannerSrc}
+            alt="Stand With Palestine"
+            className="w-full"
+          />
+        </a>
       </motion.section>
     </main>
   );
