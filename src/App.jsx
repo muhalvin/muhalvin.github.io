@@ -85,9 +85,7 @@ function App() {
                   <p className="text-sm font-semibold text-slate-100 transition group-hover:text-emerald-200">
                     Contact
                   </p>
-                  <p className="mt-0.5 text-xs text-slate-400">
-                    Email for collaboration
-                  </p>
+                  <p className="mt-0.5 text-xs text-slate-400">Email me</p>
                 </div>
                 <span className="text-slate-500 transition group-hover:translate-x-0.5 group-hover:text-emerald-200">
                   ↗
