@@ -1,114 +1,122 @@
 import { motion } from "framer-motion";
 
+const links = [
+  {
+    number: "01",
+    title: "Technical writings",
+    description: "Articles and engineering notes",
+    href: "https://muhalvin.medium.com/",
+    external: true,
+  },
+  {
+    number: "02",
+    title: "Personal thoughts",
+    description: "A quieter corner of the internet",
+    href: "https://muhalvin.my.id/",
+    external: true,
+  },
+  {
+    number: "03",
+    title: "Say hello",
+    description: "contact@muhalvin.my.id",
+    href: "mailto:contact@muhalvin.my.id",
+  },
+];
+
+function Arrow() {
+  return (
+    <span aria-hidden="true" className="link-arrow">
+      ↗
+    </span>
+  );
+}
+
 function App() {
   const palestineBannerSrc = `${import.meta.env.BASE_URL}StandWithPalestine.svg`;
 
   return (
-    <main className="page-shell flex min-h-screen items-center justify-center bg-hero-gradient px-4 py-6">
-      <motion.section
-        initial={{ opacity: 0, y: 14, scale: 0.985 }}
+    <main className="page-shell">
+      <motion.div
+        className="portfolio"
+        initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-soft backdrop-blur sm:p-8"
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-emerald-300/10 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-20 -left-20 h-52 w-52 rounded-full bg-sky-300/10 blur-3xl" />
+        <header className="site-header">
+          <a
+            className="wordmark"
+            href="#home"
+            aria-label="Muhammad Alvin, home"
+          >
+            ma<span>.</span>
+          </a>
+          <span className="availability">
+            <i /> independent developer
+          </span>
+        </header>
 
-        <div className="relative">
-          <p className="inline-flex items-center rounded-full border border-emerald-200/20 bg-emerald-300/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-emerald-200">
-            Web Developer
+        <aside className="solidarity" aria-label="A message of solidarity">
+          <img src={palestineBannerSrc} alt="Stand with Palestine" />
+          <p>
+            Solidarity with people in Palestine, Iran, Yemen, Syria, Lebanon,
+            Iraq, and Ukraine—and with all communities enduring genocide and
+            war.
           </p>
-          <h1 className="mt-4 font-display text-2xl font-semibold tracking-tight text-white sm:text-4xl">
-            Muhammad Alvin
+        </aside>
+
+        <section className="intro" id="home" aria-labelledby="intro-title">
+          <p className="eyebrow">Web developer · Indonesia</p>
+          <h1 id="intro-title">
+            Hello, I’m <span>Muhammad Alvin.</span>
           </h1>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-slate-300">
-            Web Developer <br /> Focused on building reliable and scalable web
-            systems. <br />
-            Currently working at{" "}
-            <a href="https://nusatama.co/" target="_blank" rel="noreferrer">
-              <b>NUSATAMA</b>
-            </a>
+          <p className="intro-copy">
+            I build thoughtful, dependable web experiences for people and
+            businesses. As an independent developer, I take projects from first
+            idea to polished launch.
           </p>
-        </div>
+        </section>
 
-        <ul className="relative mt-8 space-y-3.5">
-          <li>
-            <a
-              href="https://muhalvin.medium.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="group block rounded-xl border border-white/10 bg-slate-950/60 px-4 py-3.5 transition hover:border-emerald-200/40 hover:bg-slate-900 focus-visible:border-emerald-200/60"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-slate-100 transition group-hover:text-emerald-200">
-                    Technical Writings
-                  </p>
-                  <p className="mt-0.5 text-xs text-slate-400">
-                    Articles and engineering notes
-                  </p>
-                </div>
-                <span className="text-slate-500 transition group-hover:translate-x-0.5 group-hover:text-emerald-200">
-                  ↗
-                </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://muhalvin.my.id/"
-              target="_blank"
-              rel="noreferrer"
-              className="group block rounded-xl border border-white/10 bg-slate-950/60 px-4 py-3.5 transition hover:border-emerald-200/40 hover:bg-slate-900 focus-visible:border-emerald-200/60"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-slate-100 transition group-hover:text-emerald-200">
-                    Personal Thoughts
-                  </p>
-                  <p className="mt-0.5 text-xs text-slate-400">
-                    Thoughts and reflections
-                  </p>
-                </div>
-                <span className="text-slate-500 transition group-hover:translate-x-0.5 group-hover:text-emerald-200">
-                  ↗
-                </span>
-              </div>
-            </a>
-          </li>
+        <section className="links-section" aria-labelledby="links-title">
+          <div className="section-heading">
+            <h2 id="links-title">Elsewhere</h2>
+            <span>A few places to find me</span>
+          </div>
+          <nav aria-label="More from Muhammad Alvin">
+            <ul className="link-list">
+              {links.map((link, index) => (
+                <motion.li
+                  key={link.number}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.16 + index * 0.09, duration: 0.45 }}
+                >
+                  <a
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noreferrer" : undefined}
+                  >
+                    <span className="link-number">{link.number}</span>
+                    <span className="link-copy">
+                      <span className="link-title">{link.title}</span>
+                      <span className="link-description">
+                        {link.description}
+                      </span>
+                    </span>
+                    <Arrow />
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </nav>
+        </section>
 
-          <li>
-            <a
-              href="mailto:contact@muhalvin.my.id"
-              className="group block rounded-xl border border-white/10 bg-slate-950/60 px-4 py-3.5 transition hover:border-emerald-200/40 hover:bg-slate-900 focus-visible:border-emerald-200/60"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-slate-100 transition group-hover:text-emerald-200">
-                    Contact
-                  </p>
-                  <p className="mt-0.5 text-xs text-slate-400">Email me</p>
-                </div>
-                <span className="text-slate-500 transition group-hover:translate-x-0.5 group-hover:text-emerald-200">
-                  ↗
-                </span>
-              </div>
-            </a>
-          </li>
-        </ul>
-
-        <a
-          href="#"
-          rel="noreferrer"
-          className="relative mx-auto mt-8 block w-full max-w-xs overflow-hidden rounded-xl border border-white/10 transition hover:border-emerald-200/40"
-        >
-          <img
-            src={palestineBannerSrc}
-            alt="Stand With Palestine"
-            className="w-full"
-          />
-        </a>
-      </motion.section>
+        <footer className="site-footer">
+          <span>Made with care, somewhere in Indonesia.</span>
+          <span className="footer-mark">
+            © 2023 - {new Date().getFullYear()} Muhalvin
+          </span>
+        </footer>
+      </motion.div>
     </main>
   );
 }
