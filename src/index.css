@@ -99,7 +99,7 @@ h1 span { color: var(--accent); }
 .link-list a:hover .link-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
 .site-footer { display: flex; justify-content: space-between; gap: 12px; margin-top: auto; padding: 16px 0 12px; border-top: 1px solid var(--line); color: #81786e; font-size: 9px; }
-.solidarity { display: flex; flex-direction: column; align-items: center; gap: 7px; flex: 0 0 auto; padding: 12px 0 0; text-align: center; }
+.solidarity { display: flex; flex-direction: column; align-items: center; gap: 7px; flex: 0 0 auto; margin-top: 20px; padding: 12px 0 0; text-align: center; }
 .solidarity img { display: block; width: min(100%, 205px); height: auto; max-height: 32px; object-fit: contain; }
 .solidarity p { max-width: 500px; margin: 0; color: #a49a8d; font-size: 9px; line-height: 1.45; }
 
@@ -112,7 +112,7 @@ h1 span { color: var(--accent); }
   .link-list a { min-height: 56px; }
   .section-heading { padding-top: 13px; }
   .site-footer { padding-top: 10px; }
-  .solidarity { gap: 5px; padding-top: 8px; }
+  .solidarity { gap: 5px; margin-top: 14px; padding-top: 8px; }
   .solidarity p { font-size: 8px; }
 }
 
@@ -134,7 +134,7 @@ h1 span { color: var(--accent); }
   .link-list a { min-height: 48px; }
   .link-description { font-size: 9px; }
   .site-footer { padding: 8px 0; }
-  .solidarity { gap: 0; padding-top: 7px; }
+  .solidarity { gap: 0; margin-top: 8px; padding-top: 7px; }
   .solidarity img { display: none; }
 }
 

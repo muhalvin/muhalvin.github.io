@@ -55,15 +55,6 @@ function App() {
           </span>
         </header>
 
-        <aside className="solidarity" aria-label="A message of solidarity">
-          <img src={palestineBannerSrc} alt="Stand with Palestine" />
-          <p>
-            Solidarity with people in Palestine, Iran, Yemen, Syria, Lebanon,
-            Iraq, and Ukraine—and with all communities enduring genocide and
-            war.
-          </p>
-        </aside>
-
         <section className="intro" id="home" aria-labelledby="intro-title">
           <p className="eyebrow">Web developer · Indonesia</p>
           <h1 id="intro-title">
@@ -109,6 +100,15 @@ function App() {
             </ul>
           </nav>
         </section>
+
+        <aside className="solidarity" aria-label="A message of solidarity">
+          <img src={palestineBannerSrc} alt="Stand with Palestine" />
+          <p>
+            Solidarity with people in Palestine, Iran, Yemen, Syria, Lebanon,
+            Iraq, and Ukraine—and with all communities enduring genocide and
+            war.
+          </p>
+        </aside>
 
         <footer className="site-footer">
           <span>Made with care, somewhere in Indonesia.</span>
